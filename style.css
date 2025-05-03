@@ -1,0 +1,328 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Layout */
+  .wrapper {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .login-card {
+    background-color: #fff;
+    width: 50%;
+    height: 45vh;
+    padding: 24px 40px 36px;
+    border-radius: 35px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    grid: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Logo & Text */
+  .logo {
+    width: 75px;
+    display: block;
+    align-items: start;
+  }
+  
+  h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    color: #202124;
+  }
+  
+  .subtext {
+    color: #5f6368;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  /* Input Field */
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  
+  /* Links & Info */
+  .link a {
+    color: #1a73e8;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+  
+  .info-text {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 30px;
+  }
+  
+  .info-text a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+  
+  /* Buttons */
+  .buttons {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .ghost {
+    color: #1a73e8;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .next {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+
+  }
+  
+  .next:hover {
+    background-color: #1669c1;
+  }
+  
+
+  /* === RESPONSIVE STYLES === */
+
+/* Untuk tablet dan layar sedang */
+@media (max-width: 992px) {
+  .login-card {
+    height: auto;
+    grid-template-columns: 1fr; /* ubah jadi satu kolom */
+    padding: 32px 32px 24px;
+    border-radius: 25px;
+  }
+
+  .logo {
+    margin: 0 auto 16px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .subtext {
+    text-align: center;
+  }
+
+  .form {
+    margin-top: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .next, .ghost {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Untuk HP atau layar kecil */
+@media (max-width: 576px) {
+  .wrapper {
+    height: 100vh;
+    justify-content: start;
+  }
+  .login-card {
+    width: 100%;
+    height: 100vh;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .subtext, .info-text {
+    font-size: 13px;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: row;
+  }
+
+  input[type="text"] {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  input[type="password"] {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .next, .ghost {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .buttons {
+    display: flex;     
+    flex-direction: row;         /* ganti dari grid ke flex */
+    justify-content: space-around;  /* rata kanan */
+    align-items: center;
+    gap: 20px;                  /* jarak antar tombol */
+    margin-top: 40px;
+  }
+  
+  
+  .ghost {
+    color: #1a73e8;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .next {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .account-user{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 200px;
+    border: 1px solid #5f6368;
+    width: fit-content;
+    padding: 0px 5px;
+    height: 30px;
+    margin: auto;
+    font-size: small;
+  }
+
+  .info-text-password {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+}
+
+.account-user{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 200px;
+  border: 1px solid #5f6368;
+  width: fit-content;
+  padding: 0px 5px;
+  height: 30px;
+  font-size: small;
+}
+
+.account-user img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.info-text-password {
+  font-size: 14px;
+  color: #5f6368;
+  margin-bottom: 40px;
+}
+
+.show-password p {
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  color: #5f6368;
+}
+
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.show-password input{
+  width: 20px;
+  height: 20px;
+}
+
+.input-group-password {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.input-group-password input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  margin-bottom: 0px;
+}

